@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="맛집찾기"
+        android:icon="@drawable/icon_menu_search"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/menu_discount"
+        android:title="맛집할인"
+        android:icon="@drawable/icon_menu_discount"
+        app:showAsAction="withText"/>
+
+    <item
+        android:title=""
+        app:showAsAction="never"
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/menu_chat"
+        android:title="소식"
+        android:icon="@drawable/icon_menu_chat"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/menu_user"
+        android:title="내정보"
+        android:icon="@drawable/icon_menu_user"
+        app:showAsAction="withText"/>
+
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350sp"
+        android:layout_height="140sp"
+        android:background="@drawable/background_recycler_horizontal"
+        android:layout_margin="5sp"
+        android:padding="15sp">
+
+        <TextView
+            android:id="@+id/horizontal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/horizontal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="종류"
+            android:textColor="#80808080"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_title"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/horizontal_review"
+            android:layout_width="170sp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:maxLines="3"
+            android:layout_gravity="start"
+            android:ellipsize="end"
+            android:text="주절"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_type"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="3sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/horizontal_writer_photo"
+            android:layout_width="17sp"
+            android:layout_height="17sp"
+            android:src="@drawable/img_main_title"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_review"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="3sp"/>
+
+        <TextView
+            android:id="@+id/horizontal_writer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리틀포레스트"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="@id/horizontal_writer_photo"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_writer_photo"
+            app:layout_constraintLeft_toRightOf="@id/horizontal_writer_photo"
+            android:layout_marginLeft="3sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            app:cardCornerRadius="10sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/horizontal_review_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

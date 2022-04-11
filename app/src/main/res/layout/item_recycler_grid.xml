@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5sp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/grid_cardView"
+            android:layout_width="180sp"
+            android:layout_height="180sp"
+            app:cardCornerRadius="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/grid_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/grid_bookmark"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_margin="15sp"
+                    android:background="@drawable/icon_grid_empty_star"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/grid_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가/나/다 1km"
+            android:textColor="#80808080"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/grid_cardView" />
+
+        <TextView
+            android:id="@+id/grid_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="1.마루쉐"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/grid_location" />
+
+        <TextView
+            android:id="@+id/grid_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가 / 나,다,라"
+            android:textColor="#80808080"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/grid_title" />
+
+        <TextView
+            android:id="@+id/grid_review_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/near_pressed"
+            app:layout_constraintTop_toBottomOf="@id/grid_type"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/grid_review_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(리뷰 0)"
+            android:textColor="#80808080"
+            android:layout_marginLeft="5sp"
+            app:layout_constraintTop_toTopOf="@id/grid_review_point"
+            app:layout_constraintBottom_toBottomOf="@id/grid_review_point"
+            app:layout_constraintLeft_toRightOf="@id/grid_review_point" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

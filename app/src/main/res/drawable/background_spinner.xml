@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+        </shape>
+    </item>
+    <item android:gravity="center_vertical|right">
+        <layer-list>
+
+            <item android:gravity="right" android:width="10sp" android:height="10sp" >
+                <bitmap android:src="@drawable/icon_spinner_down"
+                    android:tint="@color/gray" />
+            </item>
+
+        </layer-list>
+
+    </item>
+
+</layer-list>

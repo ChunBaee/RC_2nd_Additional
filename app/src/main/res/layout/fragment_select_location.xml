@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?actionBarSize">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="지역 선택"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/btn_location_dismiss"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/icon_select_location_close" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                android:id="@+id/sub_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/less_gray"
+                app:layout_constraintTop_toBottomOf="@id/Toolbar" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toBottomOf="@id/Toolbar"
+                app:tabTextColor="@color/selector_tab_selected"
+                app:tabIndicatorColor="@color/near_pressed"
+                app:tabIndicatorGravity="top"
+                app:tabMode="scrollable" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                app:layout_constraintTop_toBottomOf="@id/tabLayout"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:elevation="0dp"
+            android:layout_gravity="bottom">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_location_set"
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_location_set"
+                android:text="적용"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_remove_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:text="지우기"
+                android:textColor="@color/location_set" />
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
